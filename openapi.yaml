@@ -1,0 +1,116 @@
+openapi: "3.0.0"
+info:
+  description: "Tento dokument slúži ako dokumentácia k testovaciemu zadaniu od AMCEF. Všetky cesty začínajú len adresou servera. V prípade spustenia aplikácie na localhoste môže vyzerať cesta na pridanie príspevku napríklad takto : http://127.0.0.1:8000/post"
+  version: "2.0.0"
+  title: "AMCEF Python Test"
+paths:
+  /post:
+    post:
+      summary: "Pridanie nového príspevku"
+      description : "Všetky údaje sa musia nachádzať v tele požiadavky v JSON formáte."
+      requestBody:
+        required : true
+        content : 
+          application/json:
+            schema : 
+              type : object
+              properties :
+                id:
+                  type : integer
+                  example : 1
+                userId:
+                  type : integer
+                  example : 3
+                title :
+                  type : string
+                  example : "Názov článku"
+                body : 
+                  type : string
+                  example : "Obsah článku"
+      responses:
+        '201':
+          description : "Príspevok bol pridaný."
+        '400':
+          description : "Chybová správa."
+  /post/{id}:
+    get:
+      summary: Zobrazí príspevok so zadaným id
+      parameters:
+        - name : id
+          in : path
+          required : true
+          schema:
+            type : integer
+            minimum : 0
+            example : 1
+      responses:
+        '200':
+          description: Zobrazí príspevok s daným id v JSON formáte
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties :
+                  id:
+                    type : integer
+                    example : 1
+                  userId:
+                    type : integer
+                    example : 3
+                  title :
+                    type : string
+                    example : "Názov článku"
+                  body : 
+                    type : string
+                    example : "Obsah článku"
+        '404' : 
+          description : Príspevok so zadaným id neexistuje.
+    put:
+      summary: Upraví príspevok so zadaným id
+      requestBody:
+        required : true
+        content : 
+          application/json:
+            schema : 
+              type : object
+              properties :
+                title :
+                  type : string
+                  example : "Názov článku"
+                body : 
+                  type : string
+                  example : "Obsah článku"
+      parameters:
+        - name : id
+          in : path
+          required : true
+          schema:
+            type : integer
+            minimum : 0
+            example : 1
+      responses:
+        '200':
+          description: Údaje boli úspešne zmenené
+        '404' : 
+          description : Príspevok so zadaným id neexistuje.
+    delete:
+      summary: Odstráni príspevok so zadaným id
+      parameters:
+        - name : id
+          in : path
+          required : true
+          schema:
+            type : integer
+            minimum : 0
+            example : 1
+      responses:
+        '200':
+          description: Príspevok bol odstránený
+        '404' : 
+          description : Príspevok so zadaným id neexistuje.
+          
+          
+          
+          
+          
+          
