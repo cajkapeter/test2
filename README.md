@@ -21,7 +21,9 @@ V priečinku Test_AMCEF si nainštalujeme všetky potrebné knižnice (Django,re
 
 **pip install -r requirements.txt**.
 
-Po nainštalovaní všetkých knižníc môžeme spustiť (lokálny) server. **python manage.py runserver**. V konzole by sa mala zobraziť adresa servera (**127.0.0.1:8000**), ktorú stačí zadať do prehliadača.
+Po nainštalovaní všetkých knižníc môžeme spustiť (lokálny) server príkazom **python manage.py runserver**.
+
+V konzole by sa mala zobraziť adresa servera (**127.0.0.1:8000**), ktorú stačí zadať do prehliadača.
 Zoznam všetkých dostupných adries a použiteľných metód nájdete v API dokumentácii (openapi.yaml).
 
 
