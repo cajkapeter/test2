@@ -18,6 +18,7 @@ Pred cestou aktuálneho adresára v konzole by sa nám malo zobrazovať **(virtu
 Vrátime sa do priečinka Test_AMCEF 2x zadaním príkazu **cd ..** .
 
 V priečinku Test_AMCEF si nainštalujeme všetky potrebné knižnice (Django,requests...), ktorých zoznam nájdeme v súbore **requirements.txt**.
+
 **pip install -r requirements.txt**.
 
 Po nainštalovaní všetkých knižníc môžeme spustiť (lokálny) server. **python manage.py runserver**. V konzole by sa mala zobraziť adresa servera (**127.0.0.1:8000**), ktorú stačí zadať do prehliadača.
