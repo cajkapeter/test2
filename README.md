@@ -15,7 +15,7 @@ Teraz musíme prostredie aktivovať. V konzole sa presunieme do priečinka virtu
 
 Pred cestou aktuálneho adresára v konzole by sa nám malo zobrazovať **(virtual)**.
 
-Vrátime sa do priečinka Test_AMCEF 2x zadaním príkazu **cd ..**.
+Vrátime sa do priečinka Test_AMCEF 2x zadaním príkazu **cd ..** .
 
 V priečinku Test_AMCEF si nainštalujeme všetky potrebné knižnice (Django,requests...), ktorých zoznam nájdeme v súbore **requirements.txt**.
 **pip install -r requirements.txt**.
